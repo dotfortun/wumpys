@@ -1,1 +1,1 @@
-__all__ = ['player', 'room', 'wumpus']
+from .room import Room
