@@ -15,3 +15,5 @@
 * Wumpus states.
 
 * Gameplay loop.
+
+May eventually become a wumpus server.
