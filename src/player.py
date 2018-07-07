@@ -6,6 +6,7 @@ class Player(object):
         super(Player, self).__init__()
         self.location = _location
         self.arrows = _arrows
+        self.state = 'ALIVE'
 
     def attack(self, _room):
         if self.arrows < 1:

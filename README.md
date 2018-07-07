@@ -6,13 +6,13 @@
 
 * ~~Room class~~.
 
-* Player class.
+* ~~Player class~~.
 
-* Wumpus class.
+* ~~Wumpus class~~.
 
 * Room effects.
 
-* Wumpus states.
+* ~~Wumpus states~~.
 
 * Gameplay loop.
 

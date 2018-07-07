@@ -11,7 +11,6 @@ class Room():
 
     def add_neighbors(self, _neighbors):
         if type(_neighbors) is not list:
-            print('Adding', _neighbors.id, 'to', self.id)
             self.neighbors.append(_neighbors)
             _neighbors.neighbors.append(self)
         else:
