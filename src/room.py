@@ -1,11 +1,7 @@
 class Room():
     """Rooms contain stuff."""
-    id = None
-    neighbors = []
-    contents = ''
-
-
     def __init__(self, _id):
+        super(Room, self).__init__()
         self.id = _id
         self.neighbors = []
         self.contents = ''
