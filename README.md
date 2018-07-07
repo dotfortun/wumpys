@@ -4,7 +4,7 @@
 
 ## To-do list:
 
-* Room class.
+* ~~Room class~~.
 
 * Player class.
 

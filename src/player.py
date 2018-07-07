@@ -18,3 +18,5 @@ class Player(object):
                 _room.hit = True
             else:
                 return
+    def move(self, _room):
+        self.location = _room
