@@ -30,17 +30,18 @@ while player.state != 'DEAD':
 # text parser block will go here.
     print("Player is in room", player.location.id)
     for room in player.location.neighbors:
-        if room is not wumpus.location:
+        if room.id != wumpus.location.id:
             print(room.id, "safe.")
         else:
             print(room.id, "dangerous.")
 
     player.move(random.choice(player.location.neighbors))
-    print("Player moved to", player.location.id, "\n\n---\n")
-    if player.location == wumpus.location:
-        player.state = "DEAD"
-
 # text parser block ends here.
+    wumpus.location.last_arrows = True
+    print("The wumpus was in room", wumpus.location.id)
+    if player.location.id == wumpus.location.id:
+        player.state = "DEAD"
+    print("Player moved to", player.location.id, "\n\n---\n")
     wumpus.update()
     for room in map:
         room.update()
