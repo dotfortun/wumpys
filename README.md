@@ -13,3 +13,5 @@
 * Room effects.
 
 * Wumpus states.
+
+* Gameplay loop.
