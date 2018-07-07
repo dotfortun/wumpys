@@ -18,6 +18,9 @@ map[2].add_neighbors([map[1], map[3], map[6]])
 map[5].add_neighbors([map[1], map[4], map[6]])
 map[7].add_neighbors([map[3], map[4], map[6]])
 
+player = Player(map[0])
+wumpus = Wumpus(map[6])
+
 while True:
     # text parser block will go here.
 
