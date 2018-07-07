@@ -4,7 +4,7 @@ class Room():
         super(Room, self).__init__()
         self.id = _id
         self.neighbors = []
-        self.contents = ''
+        self.contents = 'NOTHING'
 
     def add_neighbors(self, _neighbors):
         if type(_neighbors) is not list:
