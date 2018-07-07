@@ -2,7 +2,7 @@
 
 **Wumpys** is a small project to help teach a friend some programming things.
 
-## Features to-do list:
+## To-do list:
 
 * Room class.
 
