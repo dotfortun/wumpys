@@ -1,4 +1,6 @@
 from src.room import Room
+from src.player import Player
+from src.wumpus import Wumpus
 
 map = [
 Room(0),
@@ -11,15 +13,18 @@ Room(6),
 Room(7)
 ]
 
-print('\n\n')
-
 map[0].add_neighbors([map[3], map[4], map[1]])
 map[2].add_neighbors([map[1], map[3], map[6]])
 map[5].add_neighbors([map[1], map[4], map[6]])
 map[7].add_neighbors([map[3], map[4], map[6]])
 
-for room in map:
-    print("Room:", room.id)
-    for neighbor in room.neighbors:
-        print("N:", neighbor.id)
-    print('---')
+player = Player(map[0])
+wumpus = Wumpus(map[6])
+
+while True:
+    # text parser block will go here.
+
+    # text parser block ends here.
+    wumpus.update()
+    for room in map:
+        room.update()
