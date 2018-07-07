@@ -6,7 +6,7 @@ class Room():
         self.neighbors = []
         self.contents = 'NOTHING'
         self.arrows = 0
-        self.last_arrows = 0
+        self.last_arrows = False
         self.hit = False
 
     def add_neighbors(self, _neighbors):
@@ -20,5 +20,5 @@ class Room():
                     self.add_neighbors(room)
 
     def update(self):
-        self.last_arrows = self.arrows
+        self.last_arrows = False
         self.hit = False
