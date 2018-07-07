@@ -7,6 +7,8 @@ class Room():
 
     def __init__(self, _id):
         self.id = _id
+        self.neighbors = []
+        self.contents = ''
 
     def add_neighbors(self, _neighbors):
         if type(_neighbors) is not list:
