@@ -5,6 +5,9 @@ class Room():
         self.id = _id
         self.neighbors = []
         self.contents = 'NOTHING'
+        self.arrows = 0
+        self.last_arrows = 0
+        self.hit = False
 
     def add_neighbors(self, _neighbors):
         if type(_neighbors) is not list:
@@ -15,3 +18,7 @@ class Room():
             for room in _neighbors:
                 if room not in self.neighbors:
                     self.add_neighbors(room)
+
+    def update(self):
+        self.last_arrows = self.arrows
+        self.hit = False

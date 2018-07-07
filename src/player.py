@@ -7,21 +7,14 @@ class Player(object):
         self.location = _location
         self.arrows = _arrows
 
-    def attack(self):
-        if self.arrows == 0:
-            return False
-        if len(self.location.neighbors) == 0:
-            return False
+    def attack(self, _room):
+        if self.arrows < 1:
+            print('You are out of arrows.')
+            return
         else:
-            print("Adjacent rooms:")
-            for room in self.location.neighbors:
-                print(room.id)
-            print("---")
-            while True:
-                try:
-                    target = int(input("Type in a room number to fire your arrow:"))
-                    break
-                except ValueError:
-                    print("That wasn't a room number.")
-            for room in self.location.neighbors:
-                if room.id ==
+            self.arrows -= 1
+            _room.arrows += 1
+            if random.randint(0,9) < 4:
+                _room.hit = True
+            else:
+                return
