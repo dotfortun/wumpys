@@ -5,7 +5,7 @@ import random
 import time
 
 def make_torus(_majrad, _minrad):
-    all_nodes = [Room(x) for x in range(_majrad * _minrad)]
+    all_nodes = [[]] * _majrad
     return all_nodes
 
 map = [
@@ -18,6 +18,18 @@ Room(5),
 Room(6),
 Room(7)
 ]
+
+print(make_torus(3,3))
+
+print(0 % 3)
+print(1 % 3)
+print(2 % 3)
+print(3 % 3)
+print(4 % 3)
+print(5 % 3)
+print(6 % 3)
+print(7 % 3)
+print(8 % 3)
 
 map[0].add_neighbors([map[3], map[4], map[1]])
 map[2].add_neighbors([map[1], map[3], map[6]])
