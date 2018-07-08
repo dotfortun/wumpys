@@ -4,6 +4,10 @@ from src.wumpus import Wumpus
 import random
 import time
 
+def make_torus(_majrad, _minrad):
+    all_nodes = [Room(x) for x in range(_majrad * _minrad)]
+    return all_nodes
+
 map = [
 Room(0),
 Room(1),
@@ -26,24 +30,25 @@ wumpus = Wumpus(random.choice(map))
 while wumpus.location is player.location:
     wumpus.location = random.choice(map)
 
-while player.state != 'DEAD':
-# text parser block will go here.
-    print("Player is in room", player.location.id)
-    for room in player.location.neighbors:
-        if room.id != wumpus.location.id:
-            print(room.id, "safe.")
-        else:
-            print(room.id, "dangerous.")
-
-    player.move(random.choice(player.location.neighbors))
-# text parser block ends here.
-    wumpus.location.last_arrows = True
-    print("The wumpus was in room", wumpus.location.id)
-    if player.location.id == wumpus.location.id:
-        player.state = "DEAD"
-    print("Player moved to", player.location.id, "\n\n---\n")
-    wumpus.update()
-    for room in map:
-        room.update()
-    time.sleep(1)
+# while player.state != "DEAD":
+# # text parser block will go here.
+#     print("Player is in room", player.location.id)
+#     for room in player.location.neighbors:
+#         if room.id != wumpus.location.id:
+#             print(room.id, "safe.")
+#         else:
+#             print(room.id, "dangerous.")
+#     if player.location.id == wumpus.location.id:
+#         player.state = "DEAD"
+#     player.move(random.choice(player.location.neighbors))
+# # text parser block ends here.
+#     wumpus.location.last_arrows = True
+#     print("The wumpus was in room", wumpus.location.id)
+#     print("Player moved to", player.location.id, "\n\n---\n")
+#     wumpus.update()
+#     for room in map:
+#         room.update()
+#     if player.location.id == wumpus.location.id:
+#         player.state = "DEAD"
+#     time.sleep(1)
 print('YOU DIED.')
